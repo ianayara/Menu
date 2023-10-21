@@ -184,3 +184,10 @@ body {
 .carrousel .punto.activo {
   background-color: lightblue;
 }
+
+.menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
