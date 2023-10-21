@@ -173,8 +173,8 @@ body {
 }
 
 .carrousel .punto {
-  width: 2em;
-  height: 2em;
+  width: 1em;
+  height: 1em;
   margin: 1em 1em 0;
   color: var(--negro);
   transition: all 0.4s ease;
