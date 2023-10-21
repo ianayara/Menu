@@ -114,17 +114,46 @@ body {
   flex-direction: column;
 }
 
+.nav-bar{
+  width: 100vw;
+  z-index: 100;
+  height: 50px;
+  color: black;
+  background: var(--negro);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  align-content: center;
+  padding: 5%;
+  position: fixed;
+  top: 0;
+}
+.nav-bar h1{
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.nav-bar ul{
+  display: flex;
+  justify-content: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.nav-bar ul li{
+  padding: 5px;
+  font-size: 20px;
+}
+
 .container{
   padding: 25%;
-  height: 50vh;
-  margin: 10%;
+  height: 100vh;
+  margin: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .carrousel {
-  width: 90%;
+  width: 80%;
   max-width: 120em;
   height: auto;
   padding: 2em;
@@ -154,13 +183,17 @@ body {
 .carrousel .img {
   width: calc( 100% / 3 - 3em);
   min-height: 10vh;
-  padding: auto;
+  height: 90%;
+  
   color: var(--negro);
   transition: all 0.4s ease;
   border-radius: 1em;
+  border: 1px solid black;
   background-color: var(--blanco);
   box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  overflow: hidden;
 }
+
 
 .carrousel .puntos {
   width: 100%;
@@ -175,7 +208,7 @@ body {
 .carrousel .punto {
   width: 2em;
   height: 2em;
-  margin: 0 1em;
+  margin: 0em 1em;
   color: var(--negro);
   transition: all 0.4s ease;
   border-radius: 1em;
@@ -187,9 +220,80 @@ body {
   background-color: lightblue;
 }
 
+.vacio1{
+  width: 10px;
+  height: 50px;
+}
+
+.vacio2{
+  width: 10px;
+  height: 50px;
+}
+
 .menu{
+  width: 90%;
+  height: 100vh;
+  margin: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-size: 20px;
+}
+
+.title-menu{
+  margin: 10%;
+}
+.platos{
+  width: 90vw;
+  display: grid;
+  grid-template-columns: repeat(1, 2fr 2fr);
+  justify-content: center;
+  align-items: center;
+}
+
+.platos li{
+  margin: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px){
+  .nav-bar{
+    width: 100vw;
+    z-index: 100;
+    height: 125px;
+    color: black;
+    background: var(--negro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    padding: 25px;
+    position: fixed;
+    top: 0;
+  }
+  .nav-bar h1{
+    font-size: 30px;
+    padding-bottom: 10px;
+    user-select: none;
+    
+  }
+  .nav-bar ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column nowrap;
+  }
+  
+  .nav-bar ul li{
+    width: 100%;
+    margin: 0;
+    padding-bottom: 0;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
 }
