@@ -83,7 +83,7 @@ nav .container-logo{
   width: 75%;
   height: 75vh;
   position: relative;
-  border-radius: 15%;
+  
   overflow: hidden;
   
 }
@@ -107,6 +107,7 @@ nav .container-logo{
   height: 100%;
   object-fit: cover;
   object-position: center;
+  border-radius: 15%;
 }
 
 .slide[data-active]{
