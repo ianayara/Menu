@@ -1,35 +1,20 @@
-'use strict'
+const buttons = document.querySelectorAll('[data-button-carousel]')
 
-const grande    = document.querySelector('.grande')
-const punto     = document.querySelectorAll('.punto')
+buttons.forEach( button =>{
+    button.addEventListener('click', ()=>{
+        const offset = button.dataset.carouselButton === "next"? 1: -1
+        const slides = button
+            .closest("[data-carousel]")
+            .querySelector("[data-slides]")
 
-// Cuando CLICK en punto
-    // Saber la posición de ese punto
-    // Aplicar un transform translateX al grande
-    // QUITAR la clase activo de TODOS puntos
-    // AÑADIR la clase activo al punto que hemos hecho CLICK
+        const activeSlide = slides.querySelector("[data-active]")
+        let newIndex = [...slides.children].indexOf(activeSlide) + offset
 
-// Recorrer TODOS los punto
+        if (newIndex < 0) newIndex = slides.children.length - 1
+        if (newIndex >= slides.children.length) newIndex = 0
 
-punto.forEach( ( cadaPunto , i )=> {
-    // Asignamos un CLICK a cadaPunto
-    punto[i].addEventListener('click',()=>{
-
-        // Guardar la posición de ese PUNTO
-        let posicion  = i
-        // Calculando el espacio que debe DESPLAZARSE el GRANDE
-        let operacion = posicion * -100/3
-
-        // MOVEMOS el grand
-        grande.style.transform = `translateX(${ operacion }%)`
-
-        // Recorremos TODOS los punto
-        punto.forEach( ( cadaPunto , i )=>{
-            // Quitamos la clase ACTIVO a TODOS los punto
-            punto[i].classList.remove('activo')
-        })
-        // Añadir la clase activo en el punto que hemos hecho CLICK
-        punto[i].classList.add('activo')
+        slides.children[newIndex].dataset.active = true
+        delete activeSlide.dataset.active
 
     })
 })
