@@ -117,20 +117,22 @@ nav .container-logo{
 .carousel-button{
   position: absolute;
   z-index: 2;
-  font-size: 2rem;
   background: none;
-  border: none;
+  border: 1px solid black;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+  width: fit-content;
+  padding: 0%;
+  
 }
 
 .carousel-button.prev{
-  left: 2%;
+  left: 1.5%;
 }
 
 .carousel-button.next{
-  right: 2%;
+  right: 1.5%;
 }
 
 svg{
