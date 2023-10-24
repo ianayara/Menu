@@ -118,7 +118,7 @@ nav .container-logo{
   position: absolute;
   z-index: 2;
   background: none;
-  border: 1px solid black;
+  border: none;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
