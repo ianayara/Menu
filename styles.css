@@ -1,7 +1,7 @@
 :root {
   --darkblue: #0e0e56;
-  --negro: #292929;
-  --blanco: #ececec;
+  --negro: #29292955;
+  --blanco: #ecececcc;
   --sombra-ppal: #c9c9c9;
   --sombra-sec: #ffffff;
   --borde-negro: #00000050;
@@ -16,6 +16,26 @@
 
 html {
   scroll-behavior: smooth;
+  background: linear-gradient(
+    60deg,
+    white 10%,
+    violet,
+    #411838
+  );
+}
+
+.fondo{
+  z-index: -1;
+  position: fixed;
+  top: 0%;
+}
+
+.fondo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  
 }
 
 body{
@@ -23,11 +43,6 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(
-    60deg,
-    var(--negro),
-    var(--blanco)
-  );
 }
 
 li{
@@ -78,6 +93,14 @@ nav .container-logo{
   width: 100%;
 }
 
+#recomendation, #menu{
+  width: 100%;
+  background: linear-gradient(
+    60deg,
+    var(--negro),
+    var(--blanco)
+  );
+}
 .carousel{
   margin: 15% auto;
   width: 75%;
@@ -176,6 +199,12 @@ svg{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+footer{
+  width: 100%;
+  height: 50px;
+  background: var(--darkblue);
 }
 
 
