@@ -153,6 +153,7 @@ body {
 }
 
 .carrousel {
+  margin-top: 20px;
   width: 80%;
   max-width: 120em;
   height: auto;
